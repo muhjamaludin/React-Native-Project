@@ -1,5 +1,6 @@
 import React from 'react'
 import {StyleSheet, Text, View} from 'react-native'
+import * as Font from 'expo-font'
 
 export default class Header extends React.Component {
 	render() {
@@ -9,7 +10,7 @@ export default class Header extends React.Component {
 			</View>
 		)
 	}
-} 
+}
 
 const styles = StyleSheet.create({
 	header: {
@@ -22,7 +23,8 @@ const styles = StyleSheet.create({
 	},
 	header_text: {
 		fontWeight: 'bold',
-		fontSize: 17,
-		textAlign: 'center' 
+		fontSize: 20,
+		textAlign: 'center',
+		top: 5
 	}
 })
