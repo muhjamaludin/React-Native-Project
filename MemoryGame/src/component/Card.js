@@ -22,7 +22,7 @@ export default class Card extends React.Component {
 						name={icon_name}
 						size={50}
 						color={icon_color}
-					</CardSource>
+					/>
 				</TouchableHighlight>
 			</View>
 		)

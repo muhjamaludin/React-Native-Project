@@ -1,7 +1,7 @@
 import React from 'react'
 import {StyleSheet, Text, View} from 'react-native'
 
-export default clas Score extends React.Component {
+export default class Score extends React.Component {
 	render() {
 		return (
 			<View style={styles.score_container} >
@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
 		flex: 1,
 		alignItems: 'center',
 		padding: 10,
-	}
+	},
 	score: {
 		fontSize: 40,
 		fontWeight: 'bold'
