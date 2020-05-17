@@ -49,12 +49,12 @@ export default class App extends React.Component {
       {
         src: 'entypo',
         name: 'youtube',
-        color: '#1686d9'
+        color: '#f70000'
       },
       {
         src: 'entypo',
         name: 'shop',
-        color: '#ff0000'
+        color: '#5f5f5f'
       },
       {
         src: 'fontawesome',
@@ -64,7 +64,7 @@ export default class App extends React.Component {
       {
         src: 'fontawesome',
         name: 'skype',
-        color: '#5f5f5f'
+        color: '#1686d9'
       },
       {
         src: 'fontawesome',
@@ -84,10 +84,10 @@ export default class App extends React.Component {
     ]
 
     let clone = JSON.parse(JSON.stringify(cards))
-    this.cards = cards.concat(clone)
 
+    this.cards = cards.concat(clone)
     this.cards.map((obj) => {
-      let id = Math.random().toString(36).subString(7)
+      let id = Math.random().toString(36).substring(7)
       obj.id = id
       obj.src = sources[obj.src]
       obj.isOpen = false
@@ -123,7 +123,7 @@ export default class App extends React.Component {
   }
 
   renderRows() {
-    let contens = this.getRowContens(this.state.cards)
+    let contents = this.getRowContens(this.state.cards)
     return contents.map((cards, index) => {
       return (
         <View key={index} style={styles.row} >
@@ -149,7 +149,7 @@ export default class App extends React.Component {
     return contents_r
   }
 
-  renderCards() {
+  renderCards(cards) {
     return cards.map((card, index) => {
       return (
         <Card
@@ -174,7 +174,6 @@ export default class App extends React.Component {
     })
 
     let cards = this.state.cards
-
     if (cards[index].isOpen == false && selected_pairs.indexOf(cards[index].name) === -1) {
 
       cards[index].isOpen = true;
